@@ -2,7 +2,8 @@
 
 A simple C++ project that connects farmers directly with buyers, without a middleman. Farmers list their crops, buyers search and order them, and crops that are close to expiry are given priority so perishable produce is used before it loses value.
 
-##Features
+#Features
+
 Farmer registration and crop listing (name, category, price, quantity, expiry)
 Buyer registration
 Search crops by name
@@ -11,7 +12,8 @@ Order placing with quantity update
 Expiry based priority (near expiry crops first)
 File handling to save and load data
 
-##Classes
+#Classes
+
 Farmer: ID, name, location, phone
 Buyer: ID, name, location, phone
 Crop: crop ID, name, category, price, quantity, expiry, farmer ID
