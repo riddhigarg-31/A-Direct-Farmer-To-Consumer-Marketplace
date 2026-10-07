@@ -20,7 +20,8 @@ Crop: crop ID, name, category, price, quantity, expiry, farmer ID
 Order: buyer ID, crop ID, quantity
 Market: holds farmers, crops and orders, and handles add, search, sort and orders
 
-##Sample Menu
+#Sample Menu
+
 1. Add farmer
 2. Add crop
 3. Show crops
@@ -28,7 +29,8 @@ Market: holds farmers, crops and orders, and handles add, search, sort and order
 5. Sort by price
 6. Exit
 
-##Data Structures Used
+#Data Structures Used
+
 Arrays to store farmers, buyers and crops
 Linear search / hashing to search crops
 Bubble sort to sort crops by price
@@ -36,13 +38,15 @@ Queue to process orders
 Priority queue for expiry based priority
 File handling (fstream) to save and load data
 
-##Technology Stack
+#Technology Stack
+
 C++
 HTML, CSS, JavaScript (frontend)
 Git and GitHub for version control
 Visual Studio Code
 
-##Team Members
+#Team Members
+
 Riddhi Garg
 Siddhi Atray
 Darishti Rane
