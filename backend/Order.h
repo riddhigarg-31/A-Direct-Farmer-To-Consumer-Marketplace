@@ -12,7 +12,14 @@ private:
     double totalPrice;
 
 public:
-
+Order()
+{
+    orderID = 0;
+    buyerID = "";
+    cropName = "";
+    quantity = 0.0;
+    totalPrice = 0.0;
+}
     Order(int id, string bID, string cName, double q, double price)
     {
         orderID = id;
