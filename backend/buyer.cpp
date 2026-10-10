@@ -41,3 +41,4 @@ string Buyer::getID()
 {
     return BuyerID;
 }
+
