@@ -1,9 +1,7 @@
 #include "crop.h"
-
 Crop::Crop()
 {
 }
-
 Crop::Crop(string id, string name, string cat, double p, double quant, int ex, string fid)
 {
     cropID = id;
@@ -14,7 +12,6 @@ Crop::Crop(string id, string name, string cat, double p, double quant, int ex, s
     expiry = ex;
     farmerID = fid;
 }
-
 void Crop::input()
 {
     cout << "Enter Crop ID: ";
@@ -39,7 +36,6 @@ void Crop::input()
     cout << "Enter Farmer ID: ";
     cin >> farmerID;
 }
-
 void Crop::display()
 {
     cout << "Crop ID: " << cropID << endl;
@@ -50,47 +46,38 @@ void Crop::display()
     cout << "Expiry: " << expiry << " days" << endl;
     cout << "Farmer ID: " << farmerID << endl;
 }
-
 string Crop::getcropID()
 {
     return cropID;
 }
-
 string Crop::getcropName()
 {
     return cropName;
 }
-
 string Crop::getcategory()
 {
     return category;
 }
-
 double Crop::getprice()
 {
     return price;
 }
-
 double Crop::getquantity()
 {
     return quantity;
 }
-
 int Crop::getexpiry()
 {
     return expiry;
 }
-
 string Crop::getfarmerID()
 {
     return farmerID;
 }
-
 void Crop::quantityUpdate(double quantpurchased)
 {
     cout << "Available quantity: " << quantity << endl;
     cout << "Quantity purchased: " << quantpurchased << endl;
-
     if (quantpurchased > quantity || quantpurchased < 0)
     {
         cout << "Invalid quantity" << endl;
@@ -101,25 +88,20 @@ void Crop::quantityUpdate(double quantpurchased)
         cout << "Remaining quantity: " << quantity << endl;
     }
 }
-
 void Crop::setprice(double p)
 {
     price = p;
 }
-
 void Crop::setexpiry(int e)
 {
     expiry = e;
 }
-
 void Crop::saveToFile()
 {
     ifstream check("crops.txt");
-
     string id, name, cat, fid;
     double p, q;
     int ex;
-
     while (check >> id >> name >> cat >> p >> q >> ex >> fid)
     {
         if (id == cropID)
@@ -129,11 +111,8 @@ void Crop::saveToFile()
             return;
         }
     }
-
     check.close();
-
     ofstream file("crops.txt", ios::app);
-
     file << cropID << " "
          << cropName << " "
          << category << " "
@@ -143,14 +122,11 @@ void Crop::saveToFile()
          << farmerID << endl;
 
     file.close();
-
     cout << "Crop saved successfully." << endl;
 }
-
 void Crop::readFromFile()
 {
     ifstream file("crops.txt");
-
     while (file >> cropID)
     {
         file >> cropName;
@@ -163,6 +139,5 @@ void Crop::readFromFile()
         cout << endl;
         display();
     }
-
     file.close();
 }
