@@ -1,6 +1,6 @@
 #include "crop.h"
 Crop::Crop()
-{
+{ 
 }
 Crop::Crop(string id, string name, string cat, double p, double quant, int ex, string fid)
 {
