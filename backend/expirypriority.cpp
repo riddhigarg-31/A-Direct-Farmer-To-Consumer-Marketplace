@@ -1,4 +1,4 @@
-#include "expirypriorityqueue.h"
+#include "expirypriority.h"
 
 ExpiryPriorityQueue::ExpiryPriorityQueue()
 {

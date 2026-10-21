@@ -11,6 +11,7 @@ private:
     string Location;
     string Phone;
 public:
+Buyer() {}
     void input();
     void display();
     void save(ofstream &file);
