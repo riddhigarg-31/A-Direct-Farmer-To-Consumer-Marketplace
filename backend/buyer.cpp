@@ -1,5 +1,5 @@
 #include "buyer.h"
-
+#include <limits>
 void Buyer::input()
 {
     cout << "Enter id : ";
@@ -36,9 +36,21 @@ void Buyer::read(ifstream &readfile)
     getline(readfile, Location);
     getline(readfile, Phone);
 }
+Buyer::Buyer(string id, string name, string loc, string ph)
+{
+    BuyerID = id;
+    Buyername = name;
+    Location = loc;
+    Phone = ph;
+}
 
 string Buyer::getID()
 {
     return BuyerID;
 }
-
+string Buyer::getName() {
+     return Buyername; }
+string Buyer::getLocation() { 
+    return Location; }
+string Buyer::getPhone() {
+     return Phone; }

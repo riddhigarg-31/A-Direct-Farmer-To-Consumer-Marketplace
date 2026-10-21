@@ -23,6 +23,8 @@ public:
     int getOrderID();
     string getBuyerID();
     double getTotalPrice();
+    string getCropName();
+double getQuantity();
 };
 
 #endif
