@@ -41,3 +41,7 @@ double Order::getTotalPrice()
 {
     return totalPrice;
 }
+string Order::getCropName(){ 
+    return cropName; }
+double Order::getQuantity(){ 
+    return quantity; }
