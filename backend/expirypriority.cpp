@@ -52,7 +52,7 @@ void ExpiryPriorityQueue::indexdown(int index)
 }
 void ExpiryPriorityQueue::insertcrop(Crop c)
 {
-    if (size >= max)
+    if (size >= MAX_CROPS)
         return;
 
     crop[size] = c;

@@ -2,11 +2,11 @@
 #include <iostream>
 #include "crop.h"
 using namespace std;
-#define max 100
+const int MAX_CROPS = 100;
 class ExpiryPriorityQueue
 {
 private:
-    Crop crop[max];
+   Crop crop[MAX_CROPS];
     int size;
 
     void indexup(int index);
