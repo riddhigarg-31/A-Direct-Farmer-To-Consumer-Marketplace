@@ -5,9 +5,13 @@
 }
 .navbar
 {
-    background-color: rgb(12, 110, 78);
+    background-color: rgb(11, 108, 73) !important;
 }
 .card
 {
     margin-left: 100px;
+}
+.btn
+{
+    background-color: rgb(242, 245, 248);
 }
