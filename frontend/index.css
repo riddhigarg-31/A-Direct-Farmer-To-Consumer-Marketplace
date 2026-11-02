@@ -9,7 +9,13 @@
 }
 .card
 {
-    margin-left: 100px;
+    margin-left: 130px;
+}
+.cardcontainer
+{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 .btn
 {
