@@ -1,0 +1,13 @@
+.carousel-inner img
+{
+    height: 450px; 
+    object-fit: cover;
+}
+.navbar
+{
+    background-color: rgb(12, 110, 78);
+}
+.card
+{
+    margin-left: 100px;
+}
