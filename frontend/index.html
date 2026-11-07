@@ -41,7 +41,7 @@
           <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
         </li>
         <li>
-        <a href="#" class="nav-link cart-icon">🛒 Cart</a>
+        <a href="#" class="nav-link cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -100,24 +100,26 @@
 
             <span class="carousel-control-next-icon"
                   aria-hidden="true"></span>
-
             <span class="visually-hidden">
                 Next
             </span>
-
         </button>
-
       </div>
     </div>
     </div>
-
     <div class="cardcontainer">
     <section class="card" style="max-width: 320px">
     <img src="./images/tomato.png" class="card-img-top" height="200px" width="100px" alt="...">
     <div class="card-body">
         <h4 class="card-title">Tomato</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-        <a href="#" class="btn-solid theme-primary">Go somewhere</a>
+         <p class="card-text">Fresh tomato directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹60/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Ravi</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Tomato"
+        data-price="60">
+        Add to Cart
+</button>
     </div>
    </section>
 
@@ -128,7 +130,6 @@
         <p class="card-text">Fresh cabbage directly from the farmer.</p>
         <p class="card-text"> <strong>Price:</strong> ₹30/kg</p>
         <p class="card-text"> <strong>Farmer:</strong> Aman</p>
-        <a href="#" class="btn-solid theme-primary">Add to Cart</a>
         <button class="btn-solid theme-primary add-to-cart"
         data-crop="Cabbage"
         data-price="30">
@@ -141,8 +142,14 @@
     <img src="./images/carrot.png" class="card-img-top" height="200px" width="100px" alt="...">
     <div class="card-body">
         <h4 class="card-title">Carrot</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-        <a href="#" class="btn-solid theme-primary">Go somewhere</a>
+         <p class="card-text">Fresh crrot directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹80/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Karan</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Carrot"
+        data-price="80">
+        Add to Cart
+</button>
     </div>
    </section>
 
@@ -150,8 +157,14 @@
     <img src="./images/potato.png" class="card-img-top" height="200px" width="100px" alt="...">
     <div class="card-body">
         <h4 class="card-title">Potato</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-        <a href="#" class="btn-solid theme-primary">Go somewhere</a>
+         <p class="card-text">Fresh potato directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹20/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Aman</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Potato"
+        data-price="20">
+        Add to Cart
+</button>
     </div>
    </section>
 
@@ -159,8 +172,14 @@
     <img src="./images/broccoli.png" class="card-img-top" height="200px" width="100px" alt="...">
     <div class="card-body">
         <h4 class="card-title">Broccoli</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-        <a href="#" class="btn-solid theme-primary">Go somewhere</a>
+        <p class="card-text">Fresh broccoli directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹50/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Simran</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Broccoli"
+        data-price="50">
+        Add to Cart
+</button>
     </div>
    </section>
 
@@ -168,8 +187,14 @@
     <img src="./images/cauliflower.png" class="card-img-top" height="200px" width="1000px" alt="...">
     <div class="card-body">
         <h4 class="card-title">Cauliflower</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-        <a href="#" class="btn-solid theme-primary">Go somewhere</a>
+         <p class="card-text">Fresh cauliflower directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹30/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Ramsingh</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Cauliflower"
+        data-price="30">
+        Add to Cart
+</button>
     </div>
    </section>
 </div>
