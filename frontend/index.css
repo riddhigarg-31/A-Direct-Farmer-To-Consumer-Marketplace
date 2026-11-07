@@ -5,7 +5,10 @@
 }
 .navbar
 {
-    background-color: rgb(11, 108, 73) !important;
+    background-color: rgb(21, 144, 99) !important;
+}
+.navbar .nav-link:hover {
+    color: rgb(229, 241, 229) !important;
 }
 .card
 {
@@ -20,4 +23,15 @@
 .btn
 {
     background-color: rgb(242, 245, 248);
+}
+.logo-icon
+{
+    font-size: 32px;
+    margin-right: 10px;
+}
+.brand-name
+{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
 }
