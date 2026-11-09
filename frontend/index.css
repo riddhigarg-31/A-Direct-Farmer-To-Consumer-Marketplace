@@ -168,7 +168,6 @@
     color: white;
 }
 
-/* Empty cart message */
 .empty-cart {
     text-align: center;
     color: #777;
@@ -176,7 +175,6 @@
     font-size: 18px;
 }
 
-/* Responsive cart */
 @media (max-width: 600px) {
     .cart-container {
         padding: 20px 15px;
