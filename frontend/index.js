@@ -1,5 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-// Update cart count
+
 function updateCartCount() {
     const cartCount = document.getElementById("cart-count");
 
@@ -12,11 +12,10 @@ function updateCartCount() {
         cartCount.textContent = totalItems;
     }
 }
-// Save cart in browser
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
-// Add crop to cart
+
 function addToCart(cropName, price) {
     const existingCrop = cart.find(item => item.name === cropName);
 
@@ -33,7 +32,7 @@ function addToCart(cropName, price) {
     updateCartCount();
     alert(cropName + " added to cart!");
 }
-// Add button functionality
+
 document.querySelectorAll(".add-to-cart").forEach(button => {
     button.addEventListener("click", function () {
         const cropName = this.dataset.crop;
@@ -41,15 +40,12 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
         addToCart(cropName, price);
     });
 });
-// Update count when page loads
+
 updateCartCount();
-
-
 function displayCart() {
     const cartItems = document.getElementById("cart-items");
     const subtotalElement = document.getElementById("cart-subtotal");
 
-    // Run only on cart.html
     if (!cartItems || !subtotalElement) {
         return;
     }
@@ -57,7 +53,8 @@ function displayCart() {
     cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     if (cart.length === 0) {
-        cartItems.innerHTML = "<p>Your cart is empty.</p>";
+        cartItems.innerHTML =
+        '<p class="empty-cart">Your cart is empty.</p>';
         subtotalElement.textContent = "₹0";
         return;
     }
@@ -71,14 +68,13 @@ function displayCart() {
         subtotal += itemTotal;
 
         const row = document.createElement("div");
-        row.className = "border rounded p-3 mb-3";
+        row.className = "cart-item";
 
         row.innerHTML = `
             <h5>${item.name}</h5>
             <p>Price: ₹${item.price}/kg</p>
             <p>Quantity: ${item.quantity} kg</p>
-            <p>Total: ₹${itemTotal}</p>
-            <button class="btn btn-danger remove-item"
+            <p class="item-total">Total: ₹${itemTotal}</p>            <button class="btn btn-danger remove-item"
                     data-index="${index}">
                 Remove
             </button>
@@ -89,7 +85,7 @@ function displayCart() {
 
     subtotalElement.textContent = "₹" + subtotal;
 
-    // Remove item
+   
     document.querySelectorAll(".remove-item").forEach(button => {
         button.addEventListener("click", function () {
             const index = Number(this.dataset.index);
@@ -104,5 +100,4 @@ function displayCart() {
     });
 }
 
-// Display cart when cart.html opens
 displayCart();
