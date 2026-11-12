@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <span class="logo-icon">🌱</span>
+      <span class="brand-name">FarmFresh</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+        </li>
+        <li>
+        <a href="cart.html" class="nav-link cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    <div class="container my-4">
+      <div id="carouselStacked" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-inner rounded-5 overflow-hidden">
+
+            <div class="carousel-item active">
+                <img src="./images/slide1.png"
+                     class="d-block w-100"
+                     alt="Fresh agricultural produce">
+            </div>
+
+            <div class="carousel-item">
+                <img src="./images/slide2.png"
+                     class="d-block w-100"
+                     alt="Farm fresh produce">
+            </div>
+
+            <div class="carousel-item">
+                <img src="./images/slide3.png"
+                     class="d-block w-100"
+                     alt="Fresh vegetables">
+            </div>
+
+            <div class="carousel-item">
+                <img src="./images/slide4.png"
+                     class="d-block w-100"
+                     alt="Agricultural marketplace">
+            </div>
+
+        </div>
+      <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselStacked"
+                data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"
+                  aria-hidden="true"></span>
+
+            <span class="visually-hidden">
+                Previous
+            </span>
+
+        </button>
+      <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselStacked"
+                data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"
+                  aria-hidden="true"></span>
+            <span class="visually-hidden">
+                Next
+            </span>
+        </button>
+      </div>
+    </div>
+    </div>
+    <div class="cardcontainer">
+    <section class="card" style="max-width: 320px">
+    <img src="./images/tomato.png" class="card-img-top" height="200px" width="100px" alt="...">
+    <div class="card-body">
+        <h4 class="card-title">Tomato</h4>
+         <p class="card-text">Fresh tomato directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹60/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Ravi</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Tomato"
+        data-price="60">
+        Add to Cart
+</button>
+    </div>
+   </section>
+
+    <section class="card" style="max-width: 320px">
+    <img src="./images/cabbage.png" class="card-img-top" height="200px" width="100px" alt="...">
+    <div class="card-body">
+        <h4 class="card-title">Cabbage</h4>
+        <p class="card-text">Fresh cabbage directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹30/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Aman</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Cabbage"
+        data-price="30">
+        Add to Cart
+</button>
+    </div>
+   </section>
+
+   <section class="card" style="max-width: 320px">
+    <img src="./images/carrot.png" class="card-img-top" height="200px" width="100px" alt="...">
+    <div class="card-body">
+        <h4 class="card-title">Carrot</h4>
+         <p class="card-text">Fresh crrot directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹80/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Karan</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Carrot"
+        data-price="80">
+        Add to Cart
+</button>
+    </div>
+   </section>
+
+   <section class="card" style="max-width: 320px">
+    <img src="./images/potato.png" class="card-img-top" height="200px" width="100px" alt="...">
+    <div class="card-body">
+        <h4 class="card-title">Potato</h4>
+         <p class="card-text">Fresh potato directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹20/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Aman</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Potato"
+        data-price="20">
+        Add to Cart
+</button>
+    </div>
+   </section>
+
+   <section class="card" style="max-width: 320px">
+    <img src="./images/broccoli.png" class="card-img-top" height="200px" width="100px" alt="...">
+    <div class="card-body">
+        <h4 class="card-title">Broccoli</h4>
+        <p class="card-text">Fresh broccoli directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹50/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Simran</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Broccoli"
+        data-price="50">
+        Add to Cart
+</button>
+    </div>
+   </section>
+
+   <section class="card" style="max-width: 320px">
+    <img src="./images/cauliflower.png" class="card-img-top" height="200px" width="1000px" alt="...">
+    <div class="card-body">
+        <h4 class="card-title">Cauliflower</h4>
+         <p class="card-text">Fresh cauliflower directly from the farmer.</p>
+        <p class="card-text"> <strong>Price:</strong> ₹30/kg</p>
+        <p class="card-text"> <strong>Farmer:</strong> Ramsingh</p>
+        <button class="btn-solid theme-primary add-to-cart"
+        data-crop="Cauliflower"
+        data-price="30">
+        Add to Cart
+</button>
+    </div>
+   </section>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
