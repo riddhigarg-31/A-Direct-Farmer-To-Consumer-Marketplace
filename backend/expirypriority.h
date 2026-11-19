@@ -1,12 +1,16 @@
-#pragma once
+#ifndef EXPIRYPRIORITY_H
+#define EXPIRYPRIORITY_H
+
 #include <iostream>
 #include "crop.h"
+
 using namespace std;
-const int MAX_CROPS = 100;
+
 class ExpiryPriorityQueue
 {
 private:
-   Crop crop[MAX_CROPS];
+    static const int MAX = 100;
+    Crop crop[MAX];
     int size;
 
     void indexup(int index);
@@ -16,8 +20,7 @@ public:
     ExpiryPriorityQueue();
 
     void insertcrop(Crop c);
-
     Crop removeHighestPriority();
-
     void displayByPriority();
 };
+end
