@@ -79,6 +79,7 @@ void Market::loadData()
             crops.push_back(c);
             cropSearch.insertCrop(c);
             expiryQueue.insertcrop(c);
+            categoryTree.insertCrop(c);
         }
     }
     cf.close();
@@ -183,6 +184,7 @@ void Market::addCrop()
     crops.push_back(c);
     cropSearch.insertCrop(c);
     expiryQueue.insertcrop(c);
+    categoryTree.insertCrop(c);
     saveData();
     cout << "Crop saved successfully." << endl;
 }
@@ -229,6 +231,11 @@ void Market::sortByPrice()
 void Market::showExpiryPriority()
 {
     expiryQueue.displayByPriority();
+}
+
+void Market::showCropsByCategory()
+{
+    categoryTree.displayCategories();
 }
 
 void Market::placeOrder()
