@@ -38,7 +38,7 @@ public:
 
     void loadData();
     void saveData();
-
+    vector<Crop> getAllCrops();
     void addFarmer();
     void addBuyer();
     void addCrop();

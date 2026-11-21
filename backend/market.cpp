@@ -188,7 +188,10 @@ void Market::addCrop()
     saveData();
     cout << "Crop saved successfully." << endl;
 }
-
+vector<Crop> Market::getAllCrops()
+{
+    return crops;
+}
 void Market::showCrops()
 {
     if (crops.empty())
