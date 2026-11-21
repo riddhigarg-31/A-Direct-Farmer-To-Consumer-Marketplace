@@ -1,0 +1,17 @@
+/* Dedicated styling for contact.html */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card, .border {
+    border-radius: 12px !important;
+}
+
+.btn-success {
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-success:hover {
+    background-color: #198754;
+    transform: translateY(-1px);
+}
