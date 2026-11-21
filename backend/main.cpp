@@ -23,6 +23,7 @@ int main()
         cout << "6. Sort Crops by Price\n";
         cout << "7. Show Expiry Priority\n";
         cout << "8. Place Order\n";
+        cout << "9. Show Crops by Category\n";
         cout << "0. Exit\n";
         cout << "Enter your choice: ";
 
@@ -68,6 +69,10 @@ int main()
 
             case 8:
                 m.placeOrder();
+                break;
+
+            case 9:
+                m.showCropsByCategory();
                 break;
 
             case 0:

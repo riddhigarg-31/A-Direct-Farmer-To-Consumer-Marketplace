@@ -9,7 +9,8 @@
 #include "Order.h"
 #include "hashtable.h"
 #include "expirypriority.h"
-#include "orderqueue.h"
+#include "OrderQueue.h"
+#include "tree.h"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ private:
     HashTable cropSearch;
     ExpiryPriorityQueue expiryQueue;
     OrderQueue orderQueue;
+    CategoryTree categoryTree;
 
     int nextOrderID;
 
@@ -36,7 +38,7 @@ public:
 
     void loadData();
     void saveData();
-
+    vector<Crop> getAllCrops();
     void addFarmer();
     void addBuyer();
     void addCrop();
@@ -44,6 +46,7 @@ public:
     void searchCrop();
     void sortByPrice();
     void showExpiryPriority();
+    void showCropsByCategory();
     void placeOrder();
 };
 

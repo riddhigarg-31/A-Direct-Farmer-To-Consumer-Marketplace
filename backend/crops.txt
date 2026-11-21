@@ -1,3 +1,5 @@
 C101|wheat|Rabi crops|400|3|365|F101
 C100|Carrot|Vegetable|60|1|7|F100
 C102|Sweet potato|vegetable|100|1|4|F102
+C103|Apple|Fruit|100|15|5|F101
+C104|Rice|Grain|50|40|30|F102
