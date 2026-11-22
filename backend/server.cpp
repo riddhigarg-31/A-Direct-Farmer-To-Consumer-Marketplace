@@ -25,7 +25,10 @@ int main()
             result[i]["farmerID"] = crops[i].getfarmerID();
         }
 
-        return result;
+        crow::response res(result);
+        res.add_header("Access-Control-Allow-Origin", "*");
+
+        return res;
     });
 
     app.port(18080).multithreaded().run();
