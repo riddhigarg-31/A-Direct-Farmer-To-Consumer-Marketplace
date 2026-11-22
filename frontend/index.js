@@ -107,51 +107,61 @@ document.addEventListener("click", function (event) {
     addToCart(cropName, price);
 });
 updateCartCount();
+
 function displayCart() {
     const cartItems = document.getElementById("cart-items");
     const subtotalElement = document.getElementById("cart-subtotal");
+
     if (!cartItems || !subtotalElement) {
         return;
     }
+
     cart = JSON.parse(localStorage.getItem("cart")) || [];
+
     if (cart.length === 0) {
         cartItems.innerHTML =
             '<p class="empty-cart">Your cart is empty.</p>';
+
         subtotalElement.textContent = "₹0";
         return;
     }
+
     cartItems.innerHTML = "";
+
     let subtotal = 0;
+
     cart.forEach((item, index) => {
-const imageName = cropImages[crop.cropName.trim().toLowerCase()];
-card.innerHTML = `
-    <div class="card-body">
-        ${imageName ? `
-            <img src="images/${imageName}"
-                 alt="${crop.cropName}"
-                 style="width: 100%; height: 180px; object-fit: cover;">
-        ` : ""}
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
 
-        <h4 class="card-title">${crop.cropName}</h4>
-        <p>Category: ${crop.category}</p>
-        <p><strong>Price:</strong> ₹${crop.price}/kg</p>
-        <p><strong>Available:</strong> ${crop.quantity} kg</p>
-        <p><strong>Farmer ID:</strong> ${crop.farmerID}</p>
+        const row = document.createElement("div");
+        row.className = "cart-item";
 
-        <button class="btn-solid theme-primary add-to-cart"
-            data-crop="${crop.cropName}"
-            data-price="${crop.price}">
-            Add to Cart
-        </button>
-    </div>
-`;
+        row.innerHTML = `
+            <h5>${item.name}</h5>
+            <p>Price: ₹${item.price}/kg</p>
+            <p>Quantity: ${item.quantity} kg</p>
+            <p class="item-total">Total: ₹${itemTotal}</p>
+
+            <button class="btn btn-danger remove-item"
+                    data-index="${index}">
+                Remove
+            </button>
+        `;
+
+        cartItems.appendChild(row);
     });
+
     subtotalElement.textContent = "₹" + subtotal;
+
     document.querySelectorAll(".remove-item").forEach(button => {
         button.addEventListener("click", function () {
             const index = Number(this.dataset.index);
+
             cart.splice(index, 1);
+
             localStorage.setItem("cart", JSON.stringify(cart));
+
             displayCart();
             updateCartCount();
         });
