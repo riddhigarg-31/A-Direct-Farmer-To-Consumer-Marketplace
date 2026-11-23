@@ -4,3 +4,4 @@ C102|Sweet potato|vegetable|100|1|4|F102
 C103|Apple|Fruit|100|15|5|F101
 C104|Rice|Grain|50|40|30|F102
 C105|Tomato|Vegetable|60|3|5|F102
+C106|Potato|Vegetable|50|3|4|F104

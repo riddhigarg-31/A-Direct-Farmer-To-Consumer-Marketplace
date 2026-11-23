@@ -35,7 +35,26 @@ private:
 
 public:
     Market();
+    vector<Crop> getExpiryPriorityCrops()
+    {
+    ExpiryPriorityQueue tempQueue;
 
+    // Insert all crops into the temporary priority queue
+    for (int i = 0; i < crops.size(); i++)
+    {
+        tempQueue.insertcrop(crops[i]);
+    }
+
+    vector<Crop> priorityCrops;
+
+    // Remove crops according to expiry priority
+    for (int i = 0; i < crops.size(); i++)
+    {
+        priorityCrops.push_back(tempQueue.removeHighestPriority());
+    }
+
+    return priorityCrops;
+}
     void loadData();
     void saveData();
     vector<Crop> getAllCrops();
