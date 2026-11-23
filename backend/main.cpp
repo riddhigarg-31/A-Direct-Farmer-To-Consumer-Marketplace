@@ -88,3 +88,11 @@ int main()
 
     return 0;
 }
+
+/*
+1) dir
+2) cd backend
+3) dir
+4) g++ main.cpp market.cpp farmer.cpp buyer.cpp crop.cpp Order.cpp hashtable.cpp expirypriority.cpp orderqueue.cpp tree.cpp -o marketplace.exe
+5) .\marketplace.exe
+*/
