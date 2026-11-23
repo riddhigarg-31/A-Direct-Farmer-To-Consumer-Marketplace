@@ -17,8 +17,7 @@ async function loadCrops() {
     if (!cropList) return;
 
     try {
-        const response = await fetch("http://localhost:18080/api/crops");
-
+const response = await fetch("http://localhost:18080/api/expiry-priority");
         if (!response.ok) {
             throw new Error("Unable to fetch crops");
         }
